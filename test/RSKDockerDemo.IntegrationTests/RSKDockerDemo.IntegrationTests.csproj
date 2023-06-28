@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <Folder Include="Hooks\" />
+    <Folder Include="Features\" />
   </ItemGroup>
 
 </Project>
