@@ -3,3 +3,7 @@ services:
     build: src/RSKDockerDemo
     ports:
       - 5001:80
+  integrationtests:
+    build: test/RSKdockerdemo.integrationtests
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
