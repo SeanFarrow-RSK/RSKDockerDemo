@@ -1,6 +1,6 @@
 # Learn about building .NET container images:
 # https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md
-FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine3.17 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine3.18 AS build
 WORKDIR /src
 
 # copy csproj and restore as distinct layers
@@ -15,7 +15,7 @@ RUN dotnet publish --use-current-runtime --no-restore -o /app /p:PublishTrimmed=
 # Enable globalization and time zones:
 # https://github.com/dotnet/dotnet-docker/blob/main/samples/enable-globalization.md
 # final stage/image
-FROM mcr.microsoft.com/dotnet/runtime-deps:6.0-alpine3.17
+FROM mcr.microsoft.com/dotnet/runtime-deps:6.0-alpine3.18
 WORKDIR /app
 COPY --from=build /app .
 
