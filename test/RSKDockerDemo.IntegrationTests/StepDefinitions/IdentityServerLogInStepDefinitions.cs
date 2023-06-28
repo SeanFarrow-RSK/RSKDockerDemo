@@ -1,6 +1,8 @@
 using Microsoft.Playwright;
 using RskDemo.Ids.Tests.Integration.PageModels;
 using System;
+using System.Net.Sockets;
+using RSKDockerDemo.IntegrationTests.Helpers;
 using TechTalk.SpecFlow;
 
 namespace RSKDockerDemo.IntegrationTests.StepDefinitions
@@ -21,7 +23,8 @@ namespace RSKDockerDemo.IntegrationTests.StepDefinitions
         public async Task GivenIAmOnTheLoginPage()
         {
             var browserPage = await webBrowser.NewPageAsync();
-            this.loginPage = new LoginPage(browserPage, "http://localhost:5001/account/login");
+            var address = DockerHelpers.InDocker() ? "ids:5001/account/login" : "http://localhost:5001/account/login.";
+            this.loginPage = new LoginPage(browserPage, address);
             await loginPage.GotoAsync();
         }
 
