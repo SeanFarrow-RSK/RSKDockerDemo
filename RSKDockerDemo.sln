@@ -5,23 +5,35 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D8B537DE-4BF8-42A9-A810-805E90C78FAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSKDockerDemo", "src\RSKDockerDemo\RSKDockerDemo.csproj", "{68AACB7C-E20A-4332-9042-FBA6849FF784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSKDockerDemo", "src\RSKDockerDemo\RSKDockerDemo.csproj", "{68AACB7C-E20A-4332-9042-FBA6849FF784}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E4325155-AEE2-4F7F-81C4-512BF3534E5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSKDockerDemo.IntegrationTests", "test\RSKDockerDemo.IntegrationTests\RSKDockerDemo.IntegrationTests.csproj", "{561B577A-4FC9-4430-9A55-8A72A3CA05A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{68AACB7C-E20A-4332-9042-FBA6849FF784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{68AACB7C-E20A-4332-9042-FBA6849FF784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68AACB7C-E20A-4332-9042-FBA6849FF784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68AACB7C-E20A-4332-9042-FBA6849FF784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{561B577A-4FC9-4430-9A55-8A72A3CA05A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561B577A-4FC9-4430-9A55-8A72A3CA05A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561B577A-4FC9-4430-9A55-8A72A3CA05A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561B577A-4FC9-4430-9A55-8A72A3CA05A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{68AACB7C-E20A-4332-9042-FBA6849FF784} = {D8B537DE-4BF8-42A9-A810-805E90C78FAB}
+		{561B577A-4FC9-4430-9A55-8A72A3CA05A6} = {E4325155-AEE2-4F7F-81C4-512BF3534E5B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33B1ADFB-9361-477A-8611-D6736D65BC81}
 	EndGlobalSection
 EndGlobal
