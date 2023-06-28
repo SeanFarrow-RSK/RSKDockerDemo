@@ -34,6 +34,7 @@
   <ItemGroup>
     <Folder Include="Hooks\" />
     <Folder Include="Features\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 
 </Project>
