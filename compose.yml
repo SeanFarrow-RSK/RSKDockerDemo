@@ -1,0 +1,5 @@
+services:
+  ids:
+    build: src/RSKDockerDemo
+    ports:
+      - 5001:80
