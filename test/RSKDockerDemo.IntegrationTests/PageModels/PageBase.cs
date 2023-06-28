@@ -6,7 +6,7 @@ public abstract class PageBase
 {
     private readonly string address;
     
-    protected IPage Page { get; }
+    public IPage Page { get; }
 
     protected PageBase(IPage page, string address)
     {
