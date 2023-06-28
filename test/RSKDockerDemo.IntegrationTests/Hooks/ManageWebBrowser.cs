@@ -1,5 +1,6 @@
 ﻿using BoDi;
 using Microsoft.Playwright;
+using RSKDockerDemo.IntegrationTests.Helpers;
 
 namespace RSKDockerDemo.IntegrationTests.Hooks;
 
@@ -18,12 +19,21 @@ public class ManageWebBrowser
     {
      var    playwright = await Playwright.CreateAsync();
      objectContainer.RegisterInstanceAs<IPlaywright>(playwright);
-         var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions()
+     IBrowser browser = null;
+     if (DockerHelpers.InDocker())
+     {
+         browser = await playwright.Chromium.LaunchAsync();
+     }
+     else
+     {
+         browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions()
          {
-             Headless =true,
-             Channel ="chrome"
+             Headless = true,
+             Channel = "chrome"
          });
-         objectContainer.RegisterInstanceAs<IBrowser>(browser);
+     }
+
+     objectContainer.RegisterInstanceAs<IBrowser>(browser);
     }
 
     [AfterScenario("RequiresChrome")]
